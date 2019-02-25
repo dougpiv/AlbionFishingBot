@@ -3,6 +3,7 @@ This bot was made as an OpenCV learning project, It Almost Fishes In Albion Onli
 How It Works:
 ```
 While True - Runs Forever
+
   For i In 10 - Used To Keep Track Of Fishing Bait
 
        Cast Fishing Rod - Holds Down Mouse For Random Amount Of Time
