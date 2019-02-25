@@ -1,9 +1,8 @@
 This bot was made as an OpenCV learning project, It Almost Fishes In Albion Online
 
 How It Works:
-
+```
 While True - Runs Forever
-
   For i In 10 - Used To Keep Track Of Fishing Bait
 
        Cast Fishing Rod - Holds Down Mouse For Random Amount Of Time
@@ -22,6 +21,4 @@ While True - Runs Forever
                 Break
 
     Use Fishing Bait
-      
- 
-  
+```
