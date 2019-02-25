@@ -12,8 +12,8 @@ while True:
 
         auto.cast_rod()  # Cast Fishing Rod (AutoInput.py)
 
-        # if(sound.matches):                              # Wait For Fish Bite Sound (AudioCompare.py)
-        #    auto.click()                                # Click Once To Start Fishing (AutoInput.py)
+        # if(sound.matches):  # Wait For Fish Bite Sound (AudioCompare.py)
+        #    auto.click()  # Click Once To Start Fishing (AutoInput.py)
 
         position = 0
         while True:  # While Fishing Bar Is On Screen
