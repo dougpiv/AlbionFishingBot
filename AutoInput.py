@@ -1,6 +1,5 @@
 import time
 from random import randint
-
 import pyautogui as auto
 
 

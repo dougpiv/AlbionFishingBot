@@ -1,8 +1,7 @@
 import time
-from random import randint
-
 import AutoInput as auto
 import ImageGrab as img
+from random import randint
 
 # Initialize Bot
 print("Bot Starting Up, Good Luck")
@@ -33,5 +32,4 @@ while True:
                 auto.release()  # Move Left
                 time.sleep(randint(0, 0.5))
 
-    # Every 10 Times, Use A Fishing Bait
-    # auto.use_fishing_bait()
+    auto.use_fishing_bait()  # Every 10 Times, Use A Fishing Bait
