@@ -5,7 +5,6 @@ import pyautogui as auto
 
 
 # Casts Fishing Rod, Hopefully The Random Time Makes It Seem Realistic
-
 def cast_rod():
     auto.mouseDown()
     time.sleep(randint(0, 5))
