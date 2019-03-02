@@ -1,6 +1,8 @@
 import time
 from random import randint
 
+import keyboard
+
 import AutoInput as auto
 import ImageGrab as img
 
@@ -8,30 +10,27 @@ import ImageGrab as img
 print("Bot Starting Up, Good Luck")
 
 while True:
+
     for i in range(10):
 
-        auto.cast_rod()  # Cast Fishing Rod (AutoInput.py)
+        # auto.cast_rod()  # Cast Fishing Rod (AutoInput.py)
+        if keyboard.is_pressed('`'):
+            while True:  # While Fishing Bar Is On Screen
+                position = img.get_position()
 
-        # if(sound.matches):  # Wait For Fish Bite Sound (AudioCompare.py)
-        #    auto.click()  # Click Once To Start Fishing (AutoInput.py)
+                if position == -1:  # Fishing is Over
+                    print('position is ', position, ' breaking')
+                    break
 
-        position = 0
-        while True:  # While Fishing Bar Is On Screen
-            position = img.get_position()
+                if position < 120:
+                    print('position is ', position, ' moving right')
+                    auto.hold()  # Move Right
+                    time.sleep(randint(0, 1) / 2)
 
-            if position == -1:  # Fishing is Over
-                print('position is ', position, ' breaking')
-                break
-
-            if position < 120:
-                print('position is ', position, ' moving right')
-                auto.hold()  # Move Right
-                time.sleep(randint(0, 1))
-
-            if position > 120:
-                print('position is ', position, ' moving left')
-                auto.release()  # Move Left
-                time.sleep(randint(0, 0.5))
+                if position > 120:
+                    print('position is ', position, ' moving left')
+                    auto.release()  # Move Left
+                    time.sleep(randint(0, 1) / 2)
 
     # Every 10 Times, Use A Fishing Bait
     # auto.use_fishing_bait()
