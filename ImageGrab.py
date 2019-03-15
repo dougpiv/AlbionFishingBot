@@ -27,3 +27,7 @@ def get_position():  # Captures Image, Then Iterates Until It Finds A White Pixe
         if value == 1:
             return y + 7  # In This Case, 14 Is The Length Of The Marker So 7 Is The Middle
     return -1
+
+
+def is_fishing():  # Captures Most Of The Screen
+    capture = np.array(ImageGrab.grab(bbox=(262, 140, 1578, 963)))
